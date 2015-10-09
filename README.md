@@ -1,0 +1,2 @@
+# jqueryEasyTools
+jQuery Scripts Collection
