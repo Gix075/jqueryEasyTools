@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>easyAjaxSpinner - DEMO</title>
+        <link rel="stylesheet" href="css/easyAjaxSpinner.css">
+        <link rel="stylesheet" href="demo.css">
+    </head>
+    <body>
+        
+        
+        <div class="demo-wrapper">
+            <h1>easyAjaxSpinner</h1>
+            <div id="spinnerWindow" class="demo-spinner-window">
+                
+            </div>
+            <div class="demo-spinner-buttons">
+                <a href="#spinnerWindow" class="demo-spinner-button spinnerOn">SpinnerOn</a>
+                <a href="#spinnerWindow" class="demo-spinner-button spinnerOff">SpinnerOff</a>
+            </div>
+        </div>
+        
+        <script src="js/dependencies/jquery-2.1.4.min.js"></script>
+        <script src="js/dependencies/spin.min.js"></script>
+        <script src="js/easyAjaxSpinner.js"></script>
+        <script>
+            $(document).on('ready', function() {
+                var loader = new ajaxSpinner();
+                
+                $('.demo-spinner-button').on('click', function() {
+                    if($(this).hasClass('spinnerOn')) loader.start('#spinnerWindow');
+                    if($(this).hasClass('spinnerOff')) loader.stop('#spinnerWindow');
+                });
+                
+            });
+        </script>
+    </body>
+</html>
