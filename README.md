@@ -20,6 +20,9 @@ $ bower install jquery-easy-tools --save-dev
 <script src="jqueryEasyTools/dist/js/jqueryEasyTools.pack.min.js"></script>
 ```
 
+Once *jqueryEasyTools* is loaded you can use all scripts as showed on repository wiki.<br>
+[DOCUMENTATION](https://github.com/Gix075/jqueryEasyTools/wiki)
+
 ## Scripts included
 
 * easyGmap
