@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        <title>easyYouTube</title>
+        
+        <link href='http://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="css/easyGmap.css">
+        <link rel="stylesheet" href="demo.css">
+        
+
+
+    </head>
+    
+    
+    <body>
+        
+        <section class="wrapper">
+            <h1><i class="fa fa-video-camera"></i> easyYouTube</h1>
+
+            
+            <h2>Load and customize YouTube video players!</h2>
+            
+            <div id="youTubeVideo"></div>
+            
+
+        </section>
+        
+
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="js/easyYouTube.js"></script>
+        
+        <script>
+            $(document).on('ready', function() {
+                easyYouTube({
+                    element: "#youTubeVideo",
+                    videoId: "V_YlZ1JdcVk",
+                    controls:false,
+                    autoplay: false,
+                    showinfo: false
+                });
+            });
+        </script>
+        
+        
+    </body>
+
+</html>
+
