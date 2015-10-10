@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+hr {
+    margin: 40px 0;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: #ccc;
+}
+
+#mapWrapper {
+    height: 300px;
+}
+
+.readmore-hidden {
+    display: none;
+}
+.readmore {
+    display: inline-block;
+    margin-top: 40px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.demo-spinner-window {
+    height: 300px;
+    border: 1px solid #ccc;
+}
+
+.demo-spinner-buttons {
+    margin-top: 40px;
+}
+
+.demo-spinner-button {
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition: background 0.2s ease, color 0.2s ease;
+            transition: background 0.2s ease, color 0.2s ease;
+}
+
+.demo-spinner-button:hover {
+    background: #ccc;
+    color: #333;
+}
