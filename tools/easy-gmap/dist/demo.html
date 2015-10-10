@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        <title>easyGMap</title>
+        
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" href="css/easyGmap.css">
+        <link rel="stylesheet" href="demo.css">
+
+    </head>
+    
+    
+    <body>
+        <section class="wrapper">
+            <h1><i class="fa fa-map-marker"></i> easyGMap Demo</h1>
+            
+            <h3>Output Example</h3>
+            <p>
+                This is an example for a marker in Times Square - New York<br>
+                <em>40.758891, -73.985142</em>
+            </p>
+            <div id="mapWrapper"></div>
+
+            <hr>
+            
+            <a href="http://factory.brainleaf.eu/tools/jquery/easy-gmap" title="Documentation">Documentation</a>
+        </section>
+
+       
+        <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script> 
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="js/easyGmap.js"></script>
+        <script>
+            var opts = {
+                elementId: 'mapWrapper',
+                mapLat: 40.758891,
+                mapLong: -73.985142,
+                mapZoom: 18,
+                infoBoxTitle: 'This is Times Square',
+                infoBoxDescription: 'Go to Times Square in New York',
+                markerTitle: 'Times Square',
+                markerIcon: '' // custom image
+            }
+
+
+            $(window).load(function(){
+              var map = new easyGMap(opts).getMap();
+
+            });
+        </script>
+        
+        
+    </body>
+
+</html>
+

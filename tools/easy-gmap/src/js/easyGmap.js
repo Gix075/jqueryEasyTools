@@ -1,0 +1,55 @@
+/* EASYGMAP - dev file - version 0.6.0
+*  ================================================================
+*  author: BRAINLEAF OpenSource Factory 
+*  homepage: http://factory.brainleaf.eu/tools/jquery/easy-gmap
+*  license: GNU/GPL 3
+*/
+
+function easyGMap() {   
+                        
+    this.getMap = function(opts) {
+        this.infoBoxMarkup = '<div class="easygmap_mapinfobox">'+
+                        '   <div class="easygmap_mapinfobox-sitenotice">'+
+                        ''+
+                        '   </div>'+
+                        '   <h3 class="easygmap_mapinfobox-heading">'+ opts.infoBoxTitle +'</h3>'+
+                        '   <div class="easygmap_mapinfobox-content">'+
+                        '       <p>' + opts.infoBoxDescription + '</p>'+
+                        '   </div>'+
+                        '</div>';
+        mapFromCoords(this.infoBoxMarkup,opts);
+    }
+    
+    function mapFromCoords(infoBoxMarkup,opts) {
+
+        var map_canvas = document.getElementById(opts.elementId);
+        var placePosition = new google.maps.LatLng(opts.mapLat,opts.mapLong);
+        var mapOptions = {
+            center: placePosition,
+            zoom: opts.mapZoom,
+            scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        // Map
+        var map = new google.maps.Map(map_canvas, mapOptions);
+        
+        // InfoBox
+        var infowindow = new google.maps.InfoWindow({
+            content: infoBoxMarkup
+        });
+        
+        // Marker
+        var marker = new google.maps.Marker({
+            position: placePosition, 
+            map: map, 
+            icon: opts.markerIcon,
+            title: opts.markerTitle
+        });
+            google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map,marker);
+        });
+    }
+}
+
+
+

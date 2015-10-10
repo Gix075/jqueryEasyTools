@@ -1,0 +1,67 @@
+/* EASYGMAP - dev CSS file - version 0.6.0
+*  ================================================================
+*  author: BRAINLEAF OpenSource Factory 
+*  homepage: http://factory.brainleaf.eu/tools/jquery/easy-gmap
+*  license: GNU/GPL 3
+*/
+
+
+/* Responsive Fixed Ratio */
+/* ===================================== */
+/* 
+    With the following classes it's possible to 
+    load map inside a box with a fixed ratio 
+*/
+
+.easygmap_wrapper {
+    position: relative;
+}
+
+.easygmap_wrapper::before {
+    content: "";
+    display: block;
+	padding-top: 100%; 
+}
+
+.easygmap_map {
+	position:  absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.easygmap_wrapper.ratio2_1::before{
+	padding-top: 50%;
+}
+
+.easygmap_wrapper.ratio1_2::before{
+	padding-top: 200%;
+}
+
+.easygmap_wrapper.ratio4_3::before{
+	padding-top: 75%;
+}
+
+.easygmap_wrapper.ratio16_9::before{
+	padding-top: 56.25%;
+}
+
+
+/* Marker InfoBox */
+/* ================================ */
+.easygmap_mapinfobox {
+}
+
+.easygmap_mapinfobox-heading {
+    font-size: 22px;
+    margin: 10px 0 10px;
+}
+
+.easygmap_mapinfobox-content {
+    padding: 0 0 20px 0;
+}
+
+.easygmap_mapinfobox-content p {
+    margin: 0;
+}

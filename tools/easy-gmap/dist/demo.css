@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Slab", sans-serif;
+    background-color: #1B2426;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: aquamarine;
+}
+
+hr {
+    height: 1px;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: aquamarine;
+    margin: 50px 0 0 0;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 2em;
+    color: aquamarine;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+#mapWrapper {
+    height: 300px;
+    color: #1B2426;
+}
