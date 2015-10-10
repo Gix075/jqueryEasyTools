@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        <title>easyCookie</title>
+        
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" href="demo.css">
+
+    </head>
+    
+    
+    <body>
+        <section class="wrapper">
+            <h1>easyCookies Demo</h1>
+            <form id="easyCookieDemo">
+                <h3>Write Cookie</h3>
+                <input type="text" id="cookie_set_name" name="cookie_set_name" placeholder="Cookie Name">
+                <input type="text" id="cookie_set_value" name="cookie_set_value" placeholder="Cookie Value">
+                <input type="text" id="cookie_set_expires" name="cookie_set_expires" placeholder="Days expires (number)">
+                <button id="writeCookie">Write Cookie</button>
+                <div id="writeCookieMessage" class="message">
+                    <h4>Message (callback function)</h4>
+                    <p></p>
+                </div>
+                
+                <h3>Read Cookie</h3>
+                <input type="text" id="cookie_read_name" name="cookie_read_name" placeholder="Cookie Name">
+                <button id="readCookie">Read Cookie</button>
+                <div id="readCookieMessage" class="message">
+                    <h4>Message</h4>
+                    <p></p>
+                </div>
+                
+                <h3>Match Cookie Value</h3>
+                <input type="text" id="cookie_match_name" name="cookie_match_name" placeholder="Cookie Name">
+                <input type="text" id="cookie_match_value" name="cookie_match_value" placeholder="Cookie Value">
+                <button id="matchCookieValue">Match Value</button>
+                <div id="matchCookieValueMessage" class="message">
+                    <h4>Message</h4>
+                    <p></p>
+                </div>
+                
+            </form>
+        </section>
+
+       
+
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="js/easyCookies.js"></script>
+        <script>
+
+
+            $(document).ready(function(){
+                var cookies = new easyCookies();
+
+                $('#writeCookie').click(function(e) {
+                    e.preventDefault();
+                    $('#writeCookieMessage').hide();
+                    var writeOpt = {
+                        name: $('#cookie_set_name').val(),
+                        value: $('#cookie_set_value').val(),
+                        expire: parseInt($('#cookie_set_expires').val()),
+                        callback: function(result) {
+                            if(result === true) {
+                                var message = "Success";
+                            }else{
+                                var message = "Error";
+                            }
+                            $('#writeCookieMessage > p').html(message)
+                            
+                            $('#writeCookieMessage').show();
+                        }
+                    }
+                    cookies.writeCookie(writeOpt);
+                });   
+                
+                $('#readCookie').click(function(e) {
+                    e.preventDefault();
+                    $('#readCookieMessage').hide();
+                    var readCookie = cookies.readCookie($('#cookie_read_name').val());
+                    if (readCookie !== undefined && readCookie !== "") {
+                        var message = "Cookie Value Is: " + readCookie;
+                    }else{
+                        var message = "Cookie Not Found!";
+                    }
+                    $('#readCookieMessage > p').html(message)
+                    $('#readCookieMessage').show();
+                });
+                
+                $('#matchCookieValue').click(function(e) {
+                    e.preventDefault();
+                    $('#matchCookieValueMessage').hide();
+                    var matchValueOpts = {
+                        name: $('#cookie_match_name').val(),
+                        value: $('#cookie_match_value').val(),
+                        callback: function(result) {
+                            if (result === true) {
+                                var message = "Values match!";
+                            }else{
+                                var message = "Values don't match!";
+                            }
+                            $('#matchCookieValueMessage > p').html(message)
+                            $('#matchCookieValueMessage').show();
+                        }
+                    }
+                    cookies.matchCookieValue(matchValueOpts);             
+                });
+
+            });
+        </script>
+        
+        
+    </body>
+
+</html>
+
