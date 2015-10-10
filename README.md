@@ -25,7 +25,7 @@ Once *jqueryEasyTools* is loaded you can use all scripts as showed on repository
 
 ## Scripts included
 
-* easyGmap
-* easyYouTube
-* easyReadmore
-* easyAjaxSpinner
+* easyGmap - _v0.6.0beta_
+* easyYouTube _v1.0.0_
+* easyReadmore - _v1.0.0_
+* easyAjaxSpinner - _v0.1.0alpha_
