@@ -6,6 +6,20 @@ jQuery Scripts Collection
 ## Warning
 Do not use before version 1.0.0 
 
+## Installation
+
+**Bower**
+```
+$ bower install jquery-easy-tools --save-dev
+```
+
+**Include Javascript and CSS**
+```html
+<script src="jqueryEasyTools/dist/css/jqueryEasyTools.min.css"></script>
+<script src="jquery.min.js"></script>
+<script src="jqueryEasyTools/dist/js/jqueryEasyTools.pack.min.js"></script>
+```
+
 ## Scripts included
 
 * easyGmap
