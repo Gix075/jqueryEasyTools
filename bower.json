@@ -1,0 +1,23 @@
+{
+  "name": "jqueryEasyTools",
+  "version": "0.5.1",
+  "homepage": "https://github.com/Gix075/jqueryEasyTools",
+  "authors": [
+    "Gix075 <gildo.giuliani@gmail.com>"
+  ],
+  "description": "jQuery Scripts Collection",
+  "main": "dist/js/jqueryEasyTools.pack.min.js",
+  "keywords": [
+    "jquery",
+    "tools",
+    "youtube",
+    "gmap",
+    "readmore",
+    "ajax",
+    "spinner",
+    "loader",
+    "video",
+    "player"
+  ],
+  "license": "MIT"
+}
