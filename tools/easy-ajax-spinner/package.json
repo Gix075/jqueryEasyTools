@@ -1,10 +1,10 @@
 {
   "name": "easyAjaxSpinner",
-  "version": "0.2.0",
-  "description": "a simple way to menage and ajax spinner",
-  "home": "",
-  "github": "",
-  "bugs": "",
+  "version": "0.4.0",
+  "description": "a simple way to menage an ajax spinner",
+  "home": "https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-ajax-spinner",
+  "github": "https://github.com/Gix075/jqueryEasyTools.git",
+  "bugs": "https://github.com/Gix075/jqueryEasyTools/issues",
   "author": "Gix075",
   "license": "GNU/GPL 2",
   "devDependencies": {
@@ -17,6 +17,7 @@
     "grunt-contrib-htmlmin": "~0.4.0",
     "grunt-contrib-imagemin": "~0.9.4",
     "grunt-contrib-uglify": "^0.9.2",
-    "grunt-processhtml": "~0.3.8"
+    "grunt-processhtml": "~0.3.8",
+    "grunt-string-replace": "^1.2.0"
   }
 }

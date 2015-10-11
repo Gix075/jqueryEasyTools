@@ -2,18 +2,12 @@
 function ajaxSpinner(options) {
     
     var defaults = {
-        fadeOutTime: '',
-        delay: '',
+        speedIn: 300,
+        speedOut: 300,
+        delayIn: 0,
+        delayOut: 0,
         zIndex: 1000,
-        spinJs: {
-            lines: 13, 
-            length: 28, 
-            width: 10, 
-            radius: 42, 
-            scale: 1, 
-            corners: 1, 
-            color: '#000'
-        }
+        spinJs: {}
     };
     
     this.settings = $.extend(true, defaults, options);
@@ -21,6 +15,7 @@ function ajaxSpinner(options) {
     this.loader = new Spinner(this.settings.spinJs).spin();
     
     // START LOADER
+    // ========================================
     this.start = function(element,callback) {
         $(element).css({'position': 'relative'});
         
@@ -28,15 +23,30 @@ function ajaxSpinner(options) {
             markup = '<div class="ajaxSpinner"' + style + '></div>';
             
         $(element).append(markup);
-        $(element).find('.ajaxSpinner').fadeIn();
-        target = document.querySelector(element+" > .ajaxSpinner");
-        target.appendChild(this.loader.el);
+        var plugin = this;
+        $(element).promise().done(function() {
+            
+            setTimeout(function() {
+                
+                $(element).find('.ajaxSpinner').fadeIn(plugin.settings.speedIn);
+                target = document.querySelector(element+" > .ajaxSpinner");
+                target.appendChild(plugin.loader.el);
+                
+            }, plugin.settings.delayIn);
+            
+        });
     };
     
     // STOP LOADER
+    // ========================================
     this.stop = function(element) {
-        $(element).find('.ajaxSpinner').fadeOut(300, function() {
-            $(this).remove();
-        });
+        var plugin = this;
+        setTimeout(function() {
+                
+            $(element).find('.ajaxSpinner').fadeOut(plugin.settings.speedOut, function() {
+                $(this).remove();
+            });
+                
+        }, plugin.settings.delayOut);
     };
 }

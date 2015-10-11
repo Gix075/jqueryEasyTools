@@ -37,6 +37,9 @@ module.exports = function(grunt) {
             }
         },
         cssmin: {
+            options: {
+                banner: '<%= meta.banner %>'
+            },
             target: {
                 options: {
                     banner: '<%= meta.banner %>'
@@ -67,6 +70,19 @@ module.exports = function(grunt) {
                     'dist/demo.html': ['demo/demo.html']
                 }
             }
+        },
+        'string-replace': {
+          dist: {
+            files: {
+              'dist/css/easyAjaxSpinner.css': 'src/css/easyAjaxSpinner.css'
+            },
+            options: {
+              replacements: [{
+                pattern: '/* SHOW-PACK-INFO */',
+                replacement: '<%= meta.banner %>'
+              }]
+            }
+          }
         }
     });
 
@@ -77,6 +93,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-processhtml');
+    grunt.loadNpmTasks('grunt-string-replace');
 
     // Default task(s).
     grunt.registerTask('default', [
@@ -85,7 +102,8 @@ module.exports = function(grunt) {
         'uglify',
         'cssmin',
         'copy',
-        'processhtml'
+        'processhtml',
+        'string-replace'
     ]);
 
 };

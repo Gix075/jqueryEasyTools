@@ -1,34 +1,18 @@
 /*! 
- *  easyAjaxSpinner | a simple way to menage and ajax spinner 
- *  Version 0.2.0 - Date: 11/10/2015 
- *  HomePage:  
+ *  easyAjaxSpinner | a simple way to menage an ajax spinner 
+ *  Version 0.4.0 - Date: 11/10/2015 
+ *  HomePage: https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-ajax-spinner 
 */ 
-/* EASY AJAX SPINNER */
-/* ================================== */
-/* 
-    Author: Gix075 
-    License: MIT
-    Copyright: 2015 by Gix075
-    GitHub: 
-    Bugs:
-    HomePage: 
-*/
 
 function ajaxSpinner(options) {
     
     var defaults = {
-        fadeOutTime: '',
-        delay: '',
+        speedIn: 300,
+        speedOut: 300,
+        delayIn: 0,
+        delayOut: 0,
         zIndex: 1000,
-        spinJs: {
-            lines: 13, 
-            length: 28, 
-            width: 10, 
-            radius: 42, 
-            scale: 1, 
-            corners: 1, 
-            color: '#000'
-        }
+        spinJs: {}
     };
     
     this.settings = $.extend(true, defaults, options);
@@ -36,6 +20,7 @@ function ajaxSpinner(options) {
     this.loader = new Spinner(this.settings.spinJs).spin();
     
     // START LOADER
+    // ========================================
     this.start = function(element,callback) {
         $(element).css({'position': 'relative'});
         
@@ -43,15 +28,30 @@ function ajaxSpinner(options) {
             markup = '<div class="ajaxSpinner"' + style + '></div>';
             
         $(element).append(markup);
-        $(element).find('.ajaxSpinner').fadeIn();
-        target = document.querySelector(element+" > .ajaxSpinner");
-        target.appendChild(this.loader.el);
+        var plugin = this;
+        $(element).promise().done(function() {
+            
+            setTimeout(function() {
+                
+                $(element).find('.ajaxSpinner').fadeIn(plugin.settings.speedIn);
+                target = document.querySelector(element+" > .ajaxSpinner");
+                target.appendChild(plugin.loader.el);
+                
+            }, plugin.settings.delayIn);
+            
+        });
     };
     
     // STOP LOADER
+    // ========================================
     this.stop = function(element) {
-        $(element).find('.ajaxSpinner').fadeOut(300, function() {
-            $(this).remove();
-        });
+        var plugin = this;
+        setTimeout(function() {
+                
+            $(element).find('.ajaxSpinner').fadeOut(plugin.settings.speedOut, function() {
+                $(this).remove();
+            });
+                
+        }, plugin.settings.delayOut);
     };
 }

@@ -24,11 +24,29 @@
         <script src="js/easyAjaxSpinner.js"></script>
         <script>
             $(document).on('ready', function() {
-                var loader = new ajaxSpinner();
+                
+                var spinnerOptions = {
+                        speedIn: 300,
+                        speedOut: 300,
+                        delayIn: 0,
+                        delayOut: 0,
+                        zIndex: 1000,
+                        spinJs: {
+                            lines: 13, 
+                            length: 28, 
+                            width: 10, 
+                            radius: 42, 
+                            scale: 1, 
+                            corners: 1, 
+                            color: '#000'
+                        }
+                };
+                
+                var spinner = new ajaxSpinner(spinnerOptions);
                 
                 $('.demo-spinner-button').on('click', function() {
-                    if($(this).hasClass('spinnerOn')) loader.start('#spinnerWindow');
-                    if($(this).hasClass('spinnerOff')) loader.stop('#spinnerWindow');
+                    if($(this).hasClass('spinnerOn')) spinner.start('#spinnerWindow');
+                    if($(this).hasClass('spinnerOff')) spinner.stop('#spinnerWindow');
                 });
                 
             });
