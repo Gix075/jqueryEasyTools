@@ -1,41 +1,11 @@
-#easyCookies
+#easyCookies 1.0.1 beta
 A simple way to handle cookies
 
-## USAGE
+[**easyCookies DOCUMENTATION WIKI**](https://github.com/Gix075/jqueryEasyTools/wiki/TOOL---easyCookies)
 
-``` javascript
-    var cookie = new easyCookies();
-    
-    // write cookie
-    // =================================
-    var opt = {
-        name: "CookieName",
-        value: "",
-        expire: 30,
-        callback: function(result) {
-            [...]
-        }
-    }
-    cookie.writeCookie(opt);
-    
-    // read cookie
-    // =================================
-    cookie.readCookie("cookieName");
-    
-    // delete cookie
-    // =================================
-    cookie.deleteCookie("cookieName");
-    
-    // match cookie value
-    // =================================
-    var opt = {
-        name: "CookieName",
-        value: "Cookie Value",
-        callback: function(result) {
-            [...]
-        }
-    }
-    cookies.matchCookieValue(opt);  
-```
+## History
+
+#### version 1.0.1 beta
+* Some little bugs fixed
 
 

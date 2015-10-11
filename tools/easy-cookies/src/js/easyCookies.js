@@ -2,7 +2,7 @@ function easyCookies() {
     
     this.writeCookie = function(opt) {
         var d = new Date();
-        d.setTime(d.getTime() + (opt.expire*24*60*60*1000));
+        d.setTime(d.getTime() + (opt.expires*24*60*60*1000));
         var expires = "expires="+d.toUTCString();
         document.cookie = opt.name + "=" + opt.value + "; " + expires;
         if (opt.callback !== undefined && opt.callback !== "") {

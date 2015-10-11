@@ -62,7 +62,7 @@
                     var writeOpt = {
                         name: $('#cookie_set_name').val(),
                         value: $('#cookie_set_value').val(),
-                        expire: parseInt($('#cookie_set_expires').val()),
+                        expires: parseInt($('#cookie_set_expires').val()),
                         callback: function(result) {
                             if(result === true) {
                                 var message = "Success";
