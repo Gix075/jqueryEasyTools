@@ -1,4 +1,4 @@
-.ajaxSpinner,.easygmap_map{top:0;left:0;bottom:0;right:0}.ajaxSpinner{position:absolute;background:#fff;display:none}/*! EASYGMAP - CSS file 
+.ajaxSpinner,.easygmap_map{top:0;left:0;bottom:0;right:0}.ajaxSpinner{position:absolute;display:none}.ajaxSpinner.default{background-color:#fff}/*! EASYGMAP - CSS file 
 *  ================================================================
 *  author: Gix075
 *  homepage: https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-gmap
