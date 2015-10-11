@@ -7,6 +7,7 @@ function ajaxSpinner(options) {
         delayIn: 0,
         delayOut: 0,
         zIndex: 1000,
+        cssClass: 'default',
         spinJs: {}
     };
     
@@ -20,7 +21,7 @@ function ajaxSpinner(options) {
         $(element).css({'position': 'relative'});
         
         var style = (this.settings.zIndex !== false || this.settings.zIndex !== "") ? ' style="z-index:' + this.settings.zIndex + '"' : '',
-            markup = '<div class="ajaxSpinner"' + style + '></div>';
+            markup = '<div class="ajaxSpinner ' + this.settings.cssClass + '"' + style + '></div>';
             
         $(element).append(markup);
         var plugin = this;
