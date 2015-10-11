@@ -42,6 +42,7 @@ module.exports = function(grunt) {
         copy: {
             main: {
                 files: [
+                    {src: ['src/js/helpers/jquery.easing.1.3.js'], dest: 'dist/js/helpers/jquery.easing.1.3.js'},
                     {src: ['src/demo.css'], dest: 'dist/demo.css'},
                     {src: ['src/demo.html'], dest: 'dist/demo.html'} 
                 ]
