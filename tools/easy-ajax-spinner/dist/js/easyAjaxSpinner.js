@@ -1,3 +1,8 @@
+/*! 
+ *  easyAjaxSpinner | a simple way to menage and ajax spinner 
+ *  Version 0.2.0 - Date: 11/10/2015 
+ *  HomePage:  
+*/ 
 /* EASY AJAX SPINNER */
 /* ================================== */
 /* 
@@ -24,7 +29,7 @@ function ajaxSpinner(options) {
             corners: 1, 
             color: '#000'
         }
-    }
+    };
     
     this.settings = $.extend(true, defaults, options);
     

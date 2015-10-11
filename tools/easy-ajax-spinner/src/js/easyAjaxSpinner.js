@@ -24,7 +24,7 @@ function ajaxSpinner(options) {
             corners: 1, 
             color: '#000'
         }
-    }
+    };
     
     this.settings = $.extend(true, defaults, options);
     
