@@ -3,24 +3,6 @@
  *  Version 1.0.0 - Date: 11/10/2015 
  *  HomePage: https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-cookies 
 */ 
-/*var wcook = {
-    name: "",
-    value: "",
-    expire: 30,
-    callback: ""
-}   
-
-var mcook = {
-    name: "",
-    value: "",
-    callback: ""
-}*/
-
-/* easyCookies */
-/* ======================================= */
-/* Dev File */
-
-
 function easyCookies() {
     
     this.writeCookie = function(opt) {

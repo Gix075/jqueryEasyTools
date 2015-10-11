@@ -1,21 +1,3 @@
-/*var wcook = {
-    name: "",
-    value: "",
-    expire: 30,
-    callback: ""
-}   
-
-var mcook = {
-    name: "",
-    value: "",
-    callback: ""
-}*/
-
-/* easyCookies */
-/* ======================================= */
-/* Dev File */
-
-
 function easyCookies() {
     
     this.writeCookie = function(opt) {
