@@ -1,9 +1,3 @@
-/*! 
-    ==============================================================
-    Easy Readmore - version 1.0.0
-    http://factory.brainleaf.eu/tools/jquery/easy-readmore
-    ==============================================================
-*/
 
 function easyReadmore (options) {
     

@@ -1,9 +1,8 @@
 /*! 
-    ==============================================================
-    Easy Readmore - version 1.0.0
-    http://factory.brainleaf.eu/tools/jquery/easy-readmore
-    ==============================================================
-*/
+ *  easyReadmore | Build your collapsing text with a simple system! 
+ *  Version 1.0.1 - Date: 11/10/2015 
+ *  HomePage: https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-readmore 
+*/ 
 
 function easyReadmore (options) {
     

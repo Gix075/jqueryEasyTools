@@ -4,17 +4,29 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         meta: {
-            banner: '   /*! \n' +
-                    '    *  <%= pkg.name %> | <%= pkg.description %> \n'+
-                    '    *  Version <%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %> \n' +
-                    '    *  HomePage: <%= pkg.homepage %> \n'+
-                    '   */ \n'
+            banner: '/*! \n' +
+                    ' *  <%= pkg.name %> | <%= pkg.description %> \n'+
+                    ' *  Version <%= pkg.version %> - Date: <%= grunt.template.today("dd/mm/yyyy") %> \n' +
+                    ' *  HomePage: <%= pkg.home %> \n'+
+                    '*/ \n'
         },
         clean: {
             build: {
                 src: ["dist"]
             }
         },
+        
+        concat: {
+            options: {
+                separator: ';',
+                banner: '<%= meta.banner %>'
+            },
+            dist: {
+                src: ['src/js/easyReadmore.js'],
+                dest: 'dist/js/easyReadmore.js'
+            }
+        },
+        
         uglify: {
             options: {
                 banner: '<%= meta.banner %>'
@@ -30,9 +42,6 @@ module.exports = function(grunt) {
         copy: {
             main: {
                 files: [
-                    {src: ['src/js/easyReadmore.js'], dest: 'dist/js/easyReadmore.js'},
-                    {src: ['src/js/dependencies/jquery-2.1.4.min.js'], dest: 'dist/js/dependencies/jquery-2.1.4.min.js'},
-                    {src: ['src/js/dependencies/spin.min.js'], dest: 'dist/js/dependencies/spin.min.js'},
                     {src: ['src/demo.css'], dest: 'dist/demo.css'},
                     {src: ['src/demo.html'], dest: 'dist/demo.html'} 
                 ]
@@ -40,14 +49,16 @@ module.exports = function(grunt) {
         }
     });
 
-    // Load the plugin that provides the "uglify" task.
+
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
     // Default task(s).
     grunt.registerTask('default', [
         'clean',
+        'concat',
         'uglify',
         'copy'
     ]);
