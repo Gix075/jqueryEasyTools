@@ -20,7 +20,7 @@ A simple way to handle cookies
     
     // read cookie
     // =================================
-    cookie.writeCookie("cookieName");
+    cookie.readCookie("cookieName");
     
     // delete cookie
     // =================================
