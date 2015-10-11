@@ -41,8 +41,8 @@ function easyYouTube(options) {
     
     if (settings.responsive === true) {
         
-        var playerSizes = playerSizes();
-        playerResize (playerSizes.playerW,playerSizes.playerH);
+        var playerS = playerSizes();
+        playerResize (playerS.playerW,playerS.playerH);
         $(element).find('iframe').css({'opacity': 1});
 
     } else {
@@ -50,15 +50,15 @@ function easyYouTube(options) {
         $(element).find('iframe').css({'opacity': 1});
     }
     
-    function playerSizes () {
+    function playerSizes() {
         var playerRatio = ratio.split('/');
             playerRatio[0] = parseInt(playerRatio[0]);
             playerRatio[1] = parseInt(playerRatio[1]);
-        var playerSizes = {
+        var playerSizesObj = {
                 playerW: $(element).innerWidth(),
                 playerH: $(element).innerWidth()*playerRatio[1]/playerRatio[0]
             };
-        return playerSizes;
+        return playerSizesObj;
     }
     
     function playerResize (playerW,playerH) {
