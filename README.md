@@ -1,4 +1,4 @@
-# jqueryEasyTools 0.5.1 alpha
+# jqueryEasyTools 0.7.0 alpha
 jQuery Scripts Collection
 
 **jqueryEasyTools** is a collection of javascript tools that can help you to save time doing something such as load GoogleMaps or YouTube video or make a cool spinner for ajax calls and so on.
@@ -25,7 +25,20 @@ Once *jqueryEasyTools* is loaded you can use all scripts as showed on repository
 
 ## Scripts included
 
-* easyGmap - _v0.6.0beta_
-* easyYouTube _v1.0.0_
-* easyReadmore - _v1.0.0_
-* easyAjaxSpinner - _v0.1.0alpha_
+* easyGmap - _v1.0.1_
+* easyYouTube _v1.0.1_
+* easyReadmore - _v1.0.1_
+* easyCookies - _v1.0.0_
+* easyAjaxSpinner - _v0.2.0alpha_
+
+## Changes
+
+#### version 0.7.0
+* easyGmap updated to - _v1.0.1_
+* easyYouTube updated to _v1.0.1_
+* easyReadmore updated to _v1.0.1_
+* easyAjaxSpinner updated to _v0.2.0alpha_
+* some changes to Gruntfile
+
+#### version 0.6.0
+* easyCookies added to project

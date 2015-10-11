@@ -9,16 +9,35 @@ module.exports = function(grunt) {
         banner: "/*!\n" +
             " *  <%= pkg.title %> - v<%= pkg.version %>\n" +
             " *  ========================================================== \n" +
-            " *  (c) by <%= pkg.author %> | All righrs reserved! \n"
+            " *  Date: <%= grunt.template.today('dd/mm/yyyy') %> \n" +
+            " *  Home: <%= pkg.homepage %> \n" +
+            " *  (c) by <%= pkg.author %> | All righrs reserved! \n" +
+            "*/"
     },  
 
     clean : {
       dist : ["dist"]
     },
+      
+    concat: {
+        options: {
+            //separator: ';',
+            banner: '<%= meta.banner %>'
+        },
+        dist: {
+            src: [
+                'tools/easy-ajax-spinner/src/js/easyAjaxSpinner.js',
+                'tools/easy-gmap/src/js/easyGmap.js',
+                'tools/easy-youtube/src/js/easyYoutube.js',
+                'tools/easy-readmore/src/js/easyReadmore.js'
+            ],
+            dest: 'dist/js/jqueryEasyTools.min.js'
+        }
+    },  
 
     uglify: {
         options: {
-          banner: "<%= meta.banner_easyajaxspinner %>"
+          banner: "<%= meta.banner %>"
         },
         dist: {
            
@@ -26,16 +45,7 @@ module.exports = function(grunt) {
                 'dist/js/jqueryEasyTools.pack.min.js': [
                     'tools/easy-ajax-spinner/src/js/dependencies/spin.min.js',
                     'tools/easy-readmore/src/js/helpers/jquery.easing.1.3.js',
-                    'tools/easy-ajax-spinner/src/js/easyAjaxSpinner.js',
-                    'tools/easy-gmap/src/js/easyGmap.js',
-                    'tools/easy-youtube/src/js/easyYoutube.js',
-                    'tools/easy-readmore/src/js/easyReadmore.js'
-                ],
-                'dist/js/jqueryEasyTools.min.js': [
-                    'tools/easy-ajax-spinner/src/js/easyAjaxSpinner.js',
-                    'tools/easy-gmap/src/js/easyGmap.js',
-                    'tools/easy-youtube/src/js/easyYoutube.js',
-                    'tools/easy-readmore/src/js/easyReadmore.js'
+                    'dist/js/jqueryEasyTools.min.js'
                 ]
             }
         }
@@ -116,18 +126,19 @@ module.exports = function(grunt) {
 
 
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   //grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-copy');
   //grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');   
   grunt.loadNpmTasks('grunt-contrib-uglify');   
- // grunt.loadNpmTasks('grunt-contrib-concat');
   //grunt.loadNpmTasks('grunt-processhtml');
 
   // Default task(s).
   grunt.registerTask('default', [
     'clean:dist',
+    'concat:dist',  
     'uglify:dist',
     'cssmin:dist', 
     'copy:dist'

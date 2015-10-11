@@ -1,6 +1,7 @@
 {
-  "name": "jquery-easy-tool",
-  "version": "0.1.0",
+  "name": "jquery-easy-tools",
+  "title": "jqueryEasyTools",    
+  "version": "0.7.0",
   "description": "jquery script collection",
   "main": "src/jqueryEasyTool.js",
   "scripts": {
@@ -17,6 +18,8 @@
     "easy",
     "gmap",
     "youtube",
+    "cookie",  
+    "cookies",  
     "ajax",
     "spinner",
     "radmore",
