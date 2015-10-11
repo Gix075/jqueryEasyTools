@@ -1,9 +1,3 @@
-/* EASYGMAP - dev file - version 0.6.0
-*  ================================================================
-*  author: BRAINLEAF OpenSource Factory 
-*  homepage: http://factory.brainleaf.eu/tools/jquery/easy-gmap
-*  license: GNU/GPL 3
-*/
 
 function easyGMap() {   
                         
@@ -18,7 +12,7 @@ function easyGMap() {
                         '   </div>'+
                         '</div>';
         mapFromCoords(this.infoBoxMarkup,opts);
-    }
+    };
     
     function mapFromCoords(infoBoxMarkup,opts) {
 

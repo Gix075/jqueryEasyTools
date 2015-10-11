@@ -1,9 +1,8 @@
-/* EASYGMAP - dev file - version 0.6.0
-*  ================================================================
-*  author: BRAINLEAF OpenSource Factory 
-*  homepage: http://factory.brainleaf.eu/tools/jquery/easy-gmap
-*  license: GNU/GPL 3
-*/
+/*! 
+ *  easyGmap | A simple way to include one or more Google Maps inside your site 
+ *  Version 1.0.1 - Date: 11/10/2015 
+ *  HomePage: https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-gmap 
+*/ 
 
 function easyGMap() {   
                         
@@ -18,7 +17,7 @@ function easyGMap() {
                         '   </div>'+
                         '</div>';
         mapFromCoords(this.infoBoxMarkup,opts);
-    }
+    };
     
     function mapFromCoords(infoBoxMarkup,opts) {
 
