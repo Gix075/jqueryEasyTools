@@ -1,13 +1,3 @@
-/* EASY AJAX SPINNER */
-/* ================================== */
-/* 
-    Author: Gix075 
-    License: MIT
-    Copyright: 2015 by Gix075
-    GitHub: 
-    Bugs:
-    HomePage: 
-*/
 
 function ajaxSpinner(options) {
     
