@@ -1,10 +1,10 @@
 /*! 
  *  easyAjaxSpinner | a simple way to menage an ajax spinner 
- *  Version 0.5.0 - Date: 12/10/2015 
+ *  Version 0.6.0 - Date: 12/10/2015 
  *  HomePage: https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-ajax-spinner 
 */ 
 
-function ajaxSpinner(options) {
+function easyAjaxSpinner(options) {
     
     var defaults = {
         speedIn: 300,

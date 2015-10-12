@@ -37,6 +37,8 @@
                         delayIn: 0,
                         delayOut: 0,
                         zIndex: 1000,
+                        parentPosition: "relative",
+                        cssClass: "default",
                         spinJs: {
                             lines: 13, 
                             length: 20, 
@@ -46,7 +48,7 @@
                         }
                 };
                 
-                var spinner = new ajaxSpinner(spinnerOptions);
+                var spinner = new easyAjaxSpinner(spinnerOptions);
                 
                 $('.demo-spinner-button').on('click', function() {
                     if($(this).hasClass('spinnerOn')) spinner.start('#spinnerWindow');

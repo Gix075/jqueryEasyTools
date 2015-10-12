@@ -1,5 +1,5 @@
 
-function ajaxSpinner(options) {
+function easyAjaxSpinner(options) {
     
     var defaults = {
         speedIn: 300,
