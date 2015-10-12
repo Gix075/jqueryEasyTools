@@ -12,7 +12,8 @@ module.exports = function(grunt) {
             " *  Date: <%= grunt.template.today('dd/mm/yyyy') %> \n" +
             " *  Home: <%= pkg.homepage %> \n" +
             " *  (c) by <%= pkg.author %> | All righrs reserved! \n" +
-            "*/"
+            "*/\n" +
+            ""
     },  
 
     clean : {
