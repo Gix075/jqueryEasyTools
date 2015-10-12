@@ -97,7 +97,9 @@
                 easyReadmore();
                 
                 // easyAjaxSpinner
-                var loader = new ajaxSpinner();
+                var loader = new easyAjaxSpinner({
+                    parentPosition: "relative"
+                });
                 
                 $('.demo-spinner-button').on('click', function() {
                     if($(this).hasClass('spinnerOn')) loader.start('#spinnerWindow');
