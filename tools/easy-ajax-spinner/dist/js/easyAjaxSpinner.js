@@ -1,6 +1,6 @@
 /*! 
  *  easyAjaxSpinner | a simple way to menage an ajax spinner 
- *  Version 0.4.1 - Date: 11/10/2015 
+ *  Version 0.4.1 - Date: 12/10/2015 
  *  HomePage: https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-ajax-spinner 
 */ 
 
@@ -11,6 +11,7 @@ function ajaxSpinner(options) {
         speedOut: 300,
         delayIn: 0,
         delayOut: 0,
+        parentPosition: false,
         zIndex: 1000,
         cssClass: 'default',
         spinJs: {}
@@ -23,7 +24,10 @@ function ajaxSpinner(options) {
     // START LOADER
     // ========================================
     this.start = function(element,callback) {
-        $(element).css({'position': 'relative'});
+        
+        if (this.settings.parentPosition !== false) {
+            $(element).css({'position': this.settings.parentPosition});
+        }
         
         var style = (this.settings.zIndex !== false || this.settings.zIndex !== "") ? ' style="z-index:' + this.settings.zIndex + '"' : '',
             markup = '<div class="ajaxSpinner ' + this.settings.cssClass + '"' + style + '></div>';

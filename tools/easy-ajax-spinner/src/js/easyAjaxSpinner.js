@@ -6,6 +6,7 @@ function ajaxSpinner(options) {
         speedOut: 300,
         delayIn: 0,
         delayOut: 0,
+        parentPosition: false,
         zIndex: 1000,
         cssClass: 'default',
         spinJs: {}
@@ -18,7 +19,10 @@ function ajaxSpinner(options) {
     // START LOADER
     // ========================================
     this.start = function(element,callback) {
-        $(element).css({'position': 'relative'});
+        
+        if (this.settings.parentPosition !== false) {
+            $(element).css({'position': this.settings.parentPosition});
+        }
         
         var style = (this.settings.zIndex !== false || this.settings.zIndex !== "") ? ' style="z-index:' + this.settings.zIndex + '"' : '',
             markup = '<div class="ajaxSpinner ' + this.settings.cssClass + '"' + style + '></div>';

@@ -29,9 +29,12 @@ Once *jqueryEasyTools* is loaded you can use all scripts as showed on repository
 * easyYouTube _v1.0.1_
 * easyReadmore - _v1.0.1_
 * easyCookies - _v1.0.1_
-* easyAjaxSpinner - _v0.4.1alpha_
+* easyAjaxSpinner - _v0.5.0beta_
 
 ## Changes
+
+#### version 0.10.0
+* easyAjaxSpinner updated to _v0.5.0beta_
 
 #### version 0.9.0
 * easyCookies updated to _v1.0.1_
