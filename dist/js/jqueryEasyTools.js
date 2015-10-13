@@ -1,10 +1,11 @@
 /*!
- *  jqueryEasyTools - v0.11.0
+ *  jqueryEasyTools - v0.11.1
  *  ========================================================== 
- *  Date: 12/10/2015 
+ *  Date: 13/10/2015 
  *  Home: https://github.com/Gix075/jqueryEasyTools#readme 
  *  (c) by Gix075 | All righrs reserved! 
 */
+
 function easyAjaxSpinner(options) {
     
     var defaults = {
@@ -168,12 +169,6 @@ function easyGMap() {
 
 
 
-/*! 
-    ==============================================================
-    Easy YouTube - version 1.0.0
-    http://factory.brainleaf.eu/tools/jquery/easy-youtube
-    ==============================================================
-*/
 
 function easyYouTube(options) {
     var defaults = {
