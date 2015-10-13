@@ -25,11 +25,14 @@ Once *jqueryEasyTools* is loaded you can use all scripts as showed on repository
 
 ## Scripts included
 
-* easyGmap - _v1.0.1_
-* easyYouTube _v1.0.2_
-* easyReadmore - _v1.0.1_
-* easyCookies - _v1.0.1_
-* easyAjaxSpinner - _v0.6.0beta_
+| TOOL | WIKI | CODE |
+| ---- | ---- | ---- |
+| **easyAjaxSpinner** | [Documentation](https://github.com/Gix075/jqueryEasyTools/wiki/TOOL---easyAjaxSpinner) | [Code](https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-ajax-spinner)
+| **easyCookies** | [Documentation](https://github.com/Gix075/jqueryEasyTools/wiki/TOOL---easyCookies ) | [Code](https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-cookies)
+| **easyGmap** | [Documentation](https://github.com/Gix075/jqueryEasyTools/wiki/TOOL---easyGmap ) | [Code](https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-gmap)
+| **easyReadmore** | [Documentation](https://github.com/Gix075/jqueryEasyTools/wiki/TOOL---easyReadmore ) | [Code](https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-readmore )
+| **easyYouTube** | [Documentation](https://github.com/Gix075/jqueryEasyTools/wiki/TOOL---easyYouTube ) | [Code](https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-youtube )
+
 
 ## Changes
 
