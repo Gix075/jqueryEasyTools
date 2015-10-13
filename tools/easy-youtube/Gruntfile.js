@@ -17,7 +17,7 @@ module.exports = function(grunt) {
         },
         concat: {
             options: {
-                separator: ';',
+                //separator: ';',
                 banner: '<%= meta.banner %>'
             },
             dist: {

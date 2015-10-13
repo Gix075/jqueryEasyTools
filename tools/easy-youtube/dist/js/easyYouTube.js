@@ -1,14 +1,8 @@
 /*! 
  *  easyYouTube | asynchronous YouTube iframe generator 
- *  Version 1.0.1 - Date: 11/10/2015 
+ *  Version 1.0.2 - Date: 13/10/2015 
  *  HomePage: https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-youtube 
 */ 
-/*! 
-    ==============================================================
-    Easy YouTube - version 1.0.0
-    http://factory.brainleaf.eu/tools/jquery/easy-youtube
-    ==============================================================
-*/
 
 function easyYouTube(options) {
     var defaults = {

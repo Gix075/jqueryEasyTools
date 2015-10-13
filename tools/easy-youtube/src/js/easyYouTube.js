@@ -1,9 +1,3 @@
-/*! 
-    ==============================================================
-    Easy YouTube - version 1.0.0
-    http://factory.brainleaf.eu/tools/jquery/easy-youtube
-    ==============================================================
-*/
 
 function easyYouTube(options) {
     var defaults = {
