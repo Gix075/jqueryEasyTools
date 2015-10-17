@@ -39,14 +39,39 @@
                             width: 10, 
                             radius: 30, 
                             color: '#000'
+                        },
+                        onAfterInit: function() {
+                            alert('onAfterInit()');
+                        },
+                        onAfterIn: function() {
+                            alert('onAfterIn()');
+                        },
+                        onAfterOut: function() {
+                            alert('onAfterOut()');
+                        },
+                        onAfterDestroy: function() {
+                            alert('onAfterDestroy()');
                         }
                 };
                 
                 var spinner = new easyAjaxSpinner(spinnerOptions);
                 
+                var onAfterIn =  function() {
+                    alert('onAfterIn() on Method .start()')
+                };
+                
+                var onAfterOut =  function() {
+                    alert('onAfterOut() on Method .stop()')
+                };
+                
+                var onAfterDestroy =  function() {
+                    alert('onAfterDestroy() on Method .stop()')
+                };
+                
                 $('.demo-spinner-button').on('click', function() {
-                    if($(this).hasClass('spinnerOn')) spinner.start('#spinnerWindow');
-                    if($(this).hasClass('spinnerOff')) spinner.stop('#spinnerWindow');
+                    if($(this).hasClass('spinnerOn')) spinner.start('#spinnerWindow',onAfterIn);
+                                                                   
+                    if($(this).hasClass('spinnerOff')) spinner.stop('#spinnerWindow',onAfterOut);
                 });
                 
             });
