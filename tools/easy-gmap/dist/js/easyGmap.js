@@ -1,6 +1,6 @@
 /*! 
  *  easyGmap | A simple way to include one or more Google Maps inside your site 
- *  Version 1.0.1 - Date: 11/10/2015 
+ *  Version 1.0.2 - Date: 17/10/2015 
  *  HomePage: https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-gmap 
 */ 
 

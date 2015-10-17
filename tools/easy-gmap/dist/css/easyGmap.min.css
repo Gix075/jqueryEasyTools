@@ -1,6 +1,1 @@
-/*! EASYGMAP - CSS file 
-*  ================================================================
-*  author: Gix075
-*  homepage: https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-gmap
-*  license: MIT
-*/.easygmap_wrapper{position:relative}.easygmap_wrapper::before{content:"";display:block;padding-top:100%}.easygmap_map{position:absolute;top:0;left:0;bottom:0;right:0}.easygmap_wrapper.ratio2_1::before{padding-top:50%}.easygmap_wrapper.ratio1_2::before{padding-top:200%}.easygmap_wrapper.ratio4_3::before{padding-top:75%}.easygmap_wrapper.ratio16_9::before{padding-top:56.25%}.easygmap_mapinfobox-heading{font-size:22px;margin:10px 0}.easygmap_mapinfobox-content{padding:0 0 20px}.easygmap_mapinfobox-content p{margin:0}
+.easygmap_wrapper{position:relative}.easygmap_wrapper::before{content:"";display:block;padding-top:100%}.easygmap_map{position:absolute;top:0;left:0;bottom:0;right:0}.easygmap_wrapper.ratio2_1::before{padding-top:50%}.easygmap_wrapper.ratio1_2::before{padding-top:200%}.easygmap_wrapper.ratio4_3::before{padding-top:75%}.easygmap_wrapper.ratio16_9::before{padding-top:56.25%}.easygmap_mapinfobox-heading{font-size:22px;margin:10px 0}.easygmap_mapinfobox-content{padding:0 0 20px}.easygmap_mapinfobox-content p{margin:0}
