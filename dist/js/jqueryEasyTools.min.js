@@ -1,5 +1,5 @@
 /*!
- *  jqueryEasyTools - v0.12.0
+ *  jqueryEasyTools - v1.0.0
  *  ========================================================== 
  *  Date: 17/10/2015 
  *  Home: https://github.com/Gix075/jqueryEasyTools#readme 
