@@ -1,7 +1,7 @@
 /*!
- *  jqueryEasyTools - v0.11.1
+ *  jqueryEasyTools - v0.12.0
  *  ========================================================== 
- *  Date: 13/10/2015 
+ *  Date: 17/10/2015 
  *  Home: https://github.com/Gix075/jqueryEasyTools#readme 
  *  (c) by Gix075 | All righrs reserved! 
 */
@@ -9,23 +9,41 @@
 function easyAjaxSpinner(options) {
     
     var defaults = {
-        speedIn: 300,
-        speedOut: 300,
-        delayIn: 0,
-        delayOut: 0,
-        parentPosition: false,
-        zIndex: 1000,
-        cssClass: 'default',
-        spinJs: {}
+        speedIn: 300, // [NUMBER]
+        speedOut: 300, // [NUMBER]
+        delayIn: 0, // [NUMBER]
+        delayOut: 0, // [NUMBER]
+        parentPosition: false, // [BOOL(false only) / STRING]
+        zIndex: 1000, // [NUMBER]
+        cssClass: 'default', // [STRING]
+        spinJs: {}, // [OBJECT]
+        onAfterInit: false, // [BOOL(false only) / FUNCTION]
+        onAfterIn: false, // [BOOL(false only) / FUNCTION]
+        onAfterOut: false, // [BOOL(false only) / FUNCTION]
+        onAfterDestroy: false // [BOOL(false only) / FUNCTION]
     };
     
     this.settings = $.extend(true, defaults, options);
     
     this.loader = new Spinner(this.settings.spinJs).spin();
     
+    // onAfterInit Function
+    if ( this.settings.onAfterInit !== false ) this.settings.onAfterInit();
+    
     // START LOADER
     // ========================================
-    this.start = function(element,callback) {
+    this.start = function(element,onAfterIn) {
+        
+        var startError = false;
+        
+        if ( element === undefined || element == "") startError = "EMISSINGEL missing element ";
+        if ( jQuery.type( new String(element) ) !== "string" ) startError = "EBADTYPE element must be a string ";
+        if ( !element.length ) startError = "ENOEL element not exists ";
+        
+        if ( startError !== false) {
+            console.log('%c ' + startError,'background: #FF0000; color: #FFFFFF;');
+            return false;
+        }
         
         if (this.settings.parentPosition !== false) {
             $(element).css({'position': this.settings.parentPosition});
@@ -40,7 +58,11 @@ function easyAjaxSpinner(options) {
             
             setTimeout(function() {
                 
-                $(element).find('.ajaxSpinner').fadeIn(plugin.settings.speedIn);
+                $(element).find('.ajaxSpinner').fadeIn(plugin.settings.speedIn,function() {
+                    // onAfterIn Function
+                    if ( plugin.settings.onAfterIn !== false && onAfterIn === undefined ) plugin.settings.onAfterIn();
+                    if ( onAfterIn !== undefined || onAfterIn !== "" ) onAfterIn();
+                });
                 target = document.querySelector(element+" > .ajaxSpinner");
                 target.appendChild(plugin.loader.el);
                 
@@ -51,13 +73,39 @@ function easyAjaxSpinner(options) {
     
     // STOP LOADER
     // ========================================
-    this.stop = function(element) {
+    this.stop = function(element,onAfterOut,onAfterDestroy) {
+        
         var plugin = this;
+        
         setTimeout(function() {
+            
+            var spinnerElement = $(element).find('.ajaxSpinner');
+            
+            if ( spinnerElement.length > 0 ) {
+            
+                spinnerElement.fadeOut(plugin.settings.speedOut, function() {
+
+                    // onAfterOut Function
+                    if ( plugin.settings.onAfterOut !== false && onAfterOut === undefined ) plugin.settings.onAfterOut();
+                    if ( onAfterOut !== false && onAfterOut !== undefined ) onAfterOut();
+
+                });
+
+                spinnerElement.promise().done(function() {
+
+                    $(element).find('.ajaxSpinner').remove();
+                    // onAfterDestroy Function
+                    if ( plugin.settings.onAfterDestroy !== false && onAfterDestroy === undefined ) plugin.settings.onAfterDestroy();
+                    if ( onAfterDestroy !== false && onAfterDestroy !== undefined ) onAfterDestroy();
+
+                });
+            
+            }else{
+                console.log('%c ENOSPINNER no spinner on $("' + element + '") ','background: #FF0000; color: #FFFFFF;');
+                console.log('%c Tip: try to use start("' + element + '") before stop spinner ','background: #CCC; color: #333;');
+            }
                 
-            $(element).find('.ajaxSpinner').fadeOut(plugin.settings.speedOut, function() {
-                $(this).remove();
-            });
+            
                 
         }, plugin.settings.delayOut);
     };
