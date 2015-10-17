@@ -1,9 +1,9 @@
-# jqueryAjaxSpinner v1.0.0
+# easyAjaxSpinner v1.0.0
 Simple useful class to manage a loader spinner for ajax calls using *Spin.js*<br> 
 This tool is a light version of [jqueryIntroLoader](http://factory.brainleaf.eu/jqueryIntroLoader).
 
 
-[**jqueryAjaxSpinner DOCUMENTATION WIKI**](https://github.com/Gix075/jqueryEasyTools/wiki/TOOL---easyAjaxSpinner)
+[**easyAjaxSpinner DOCUMENTATION WIKI**](https://github.com/Gix075/jqueryEasyTools/wiki/TOOL---easyAjaxSpinner)
 
 ## History
 
