@@ -54,7 +54,7 @@ function easyAjaxSpinner(options) {
                 $(element).find('.ajaxSpinner').fadeIn(plugin.settings.speedIn,function() {
                     // onAfterIn Function
                     if ( plugin.settings.onAfterIn !== false && onAfterIn === undefined ) plugin.settings.onAfterIn();
-                    if ( onAfterIn !== undefined || onAfterIn !== "" ) onAfterIn();
+                    if ( onAfterIn !== undefined && onAfterIn !== "" ) onAfterIn();
                 });
                 target = document.querySelector(element+" > .ajaxSpinner");
                 target.appendChild(plugin.loader.el);
