@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        <title>easySmoothScroll</title>
+        
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" href="demo.css">
+
+    </head>
+    
+    
+    <body>
+        
+        <header class="wrapper">
+            <h1>easySmoothScroll <small>demo page</small></h1>
+        </header>
+        
+        <section class="wrapper">
+            <a href="#testSection1" class="scroll">Test Link to "Section1"</a>
+        </section>
+        
+        <section id="testSection1" class="wrapper test-section-1">
+            <a href="#testSection2" class="scroll">Test Link to "Section2"</a> <br>
+            <a href="#" class="back-top">Back Top</a>
+        </section>
+        
+        <section id="testSection2" class="wrapper test-section-2">
+            <a href="#testSection1" class="scroll">Test Link to "Section1"</a> <br>
+            <a href="#" class="back-top">Back Top</a>
+        </section>
+
+       
+
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="js/easySmoothScroll.js"></script>
+        <script>
+            $(document).ready(function(){
+                easySmoothScroll()
+            });
+        </script>
+        
+        
+    </body>
+
+</html>
+

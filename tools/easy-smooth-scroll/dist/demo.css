@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Slab", sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-size: 2em;
+}
+
+hr {
+    height: 1px;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: aquamarine;
+    margin: 50px 0 0 0;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.message {
+    display: none;
+}
+
+.test-section-1 {
+    height: 1000px;
+    margin-top: 1000px;
+}
+
+.test-section-2 {
+    height: 1000px;
+}
+
