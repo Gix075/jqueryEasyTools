@@ -31,7 +31,7 @@ module.exports = function(grunt) {
                 'tools/easy-cookies/dist/js/easyCookies.js',
                 'tools/easy-gmap/dist/js/easyGmap.js',
                 'tools/easy-readmore/dist/js/easyReadmore.js',
-                //'tools/easy-smooth-scroll/dist/js/easySmoothScroll.js',
+                'tools/easy-smooth-scroll/dist/js/easySmoothScroll.js',
                 'tools/easy-youtube/dist/js/easyYoutube.js'
             ],
             dest: 'dist/js/jqueryEasyTools.js'

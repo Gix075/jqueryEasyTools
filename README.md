@@ -1,10 +1,10 @@
-# jqueryEasyTools 1.0.0 beta2.1
+# jqueryEasyTools 1.0.0
 jQuery Scripts Collection
 
-**jqueryEasyTools** is a collection of javascript tools that can help you to save time doing something such as load GoogleMaps or YouTube video or make a cool spinner for ajax calls and so on.
+**jqueryEasyTools** is a collection of javascript tools that can help you to save time doing something such as load GoogleMaps, load YouTube video with a custom player, manage cookies, make a smooth scroll or make a cool spinner for ajax calls and so on.
 
 ## Warning
-Do not use before version 1.0.0 
+This is the first stable release of jqueryEasyTools. I hope this can be good. If you find some bugs, please make a bug report [here](https://github.com/Gix075/jqueryEasyTools/issues).  
 
 ## Installation
 
@@ -36,6 +36,11 @@ Once *jqueryEasyTools* is loaded you can use all scripts as showed on repository
 
 
 ## Changes
+
+#### version 1.0.0 (first stable release)
+* easySmoothScroll _v1.0.0_ added to jqueryEasyTools
+* jqueryEasyTools demo updated using the last tools version
+* some fixing
 
 #### version 1.0.0 beta2.1
 * Bug Fixing on _easyAjaxSpinner_ (now updated to _v1.0.1_) 

@@ -25,13 +25,43 @@ hr {
     border-color: #ccc;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.easy-smooth-scroll-demo a,
+.back-top {
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.easy-smooth-scroll-demo a:hover,
+.back-top:hover {
+    text-decoration: none;
+    background: #ccc;
+    color: #333;
+}
+
+/* easyGmap */
+/* =========================================== */
 #mapWrapper {
     height: 300px;
 }
 
+/* easyReadmore*/
+/* =========================================== */
 .readmore-hidden {
     display: none;
 }
+
 .readmore {
     display: inline-block;
     margin-top: 40px;
@@ -42,6 +72,8 @@ hr {
     border-radius: 10px;
 }
 
+/* easyAjaxSpinner */
+/* =========================================== */
 .demo-spinner-window {
     height: 300px;
     border: 1px solid #ccc;
@@ -65,4 +97,11 @@ hr {
 .demo-spinner-button:hover {
     background: #ccc;
     color: #333;
+}
+
+
+/* Easy Cookies */
+/* =========================================== */
+.message {
+    display: none;
 }

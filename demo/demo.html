@@ -17,9 +17,21 @@
         
         <section class="wrapper">
             <h1><i class="fa fa-rocket"></i> jqueryEasyTools Demo</h1>
+            <p>
+                On this page you can find some examples of tools usage.
+            </p>
+            <div class="easy-smooth-scroll-demo">
+                <a href="#easygmap" class="scroll">easyGmap</a>
+                <a href="#easyyoutube" class="scroll">easyYoutube</a>
+                <a href="#easyreadmore" class="scroll">easyReadmore</a>
+                <a href="#easyajaxspinner" class="scroll">easyAjaxSpinner</a>
+                <a href="#easycookie" class="scroll">easyCookies</a>
+            </div>
+            
         </section>
         
-        <section class="wrapper">
+        
+        <section  id="easygmap" class="wrapper">
             
             <h3>easyGmap Example</h3>
             <p>
@@ -33,14 +45,14 @@
         
         <hr>
         
-        <section class="wrapper">
+        <section id="easyyoutube" class="wrapper">
             <h3>easyYouTube Example</h3>
             <div id="youTubeVideo"></div>
         </section>
         
         <hr>
         
-        <section class="wrapper">   
+        <section id="easyreadmore" class="wrapper">   
             <h3>easyReadmore Example</h3>
             <div class="readmore-wrapper">
                 <p>
@@ -64,7 +76,7 @@
         
         <hr>
         
-        <section class="wrapper">   
+        <section id="easyajaxspinner" class="wrapper">   
             <h3>easyAjaxSpinner Example</h3>
             <div id="spinnerWindow" class="demo-spinner-window">
                 
@@ -75,14 +87,63 @@
             </div>
         </section>
         
+        <hr>
+        
+        <section id="easycookie" class="wrapper">
+            <h3>easyCookies Demo</h3>
+            <form id="easyCookieDemo">
+                <h2>Write Cookie</h2>
+                <input type="text" id="cookie_set_name" name="cookie_set_name" placeholder="Cookie Name">
+                <input type="text" id="cookie_set_value" name="cookie_set_value" placeholder="Cookie Value">
+                <input type="text" id="cookie_set_expires" name="cookie_set_expires" placeholder="Days expires (number)">
+                <button id="writeCookie">Write Cookie</button>
+                <div id="writeCookieMessage" class="message">
+                    <h4>Message (callback function)</h4>
+                    <p></p>
+                </div>
+                
+                <h2>Read Cookie</h2>
+                <input type="text" id="cookie_read_name" name="cookie_read_name" placeholder="Cookie Name">
+                <button id="readCookie">Read Cookie</button>
+                <div id="readCookieMessage" class="message">
+                    <h4>Message</h4>
+                    <p></p>
+                </div>
+                
+                <h2>Match Cookie Value</h2>
+                <input type="text" id="cookie_match_name" name="cookie_match_name" placeholder="Cookie Name">
+                <input type="text" id="cookie_match_value" name="cookie_match_value" placeholder="Cookie Value">
+                <button id="matchCookieValue">Match Value</button>
+                <div id="matchCookieValueMessage" class="message">
+                    <h4>Message</h4>
+                    <p></p>
+                </div>
+                
+            </form>
+            
+        </section>
+        
+        <hr>
+        
+        <div class="wrapper">
+            <a href="#" class="back-top">Back Top</a>
+        </div>
+        
+        <hr>
+        
         
         <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script> 
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="../dist/js/jqueryEasyTools.pack.min.js"></script>
+        <!--<script src="../dist/js/libs/jquery.easing.1.3.js"></script>
+        <script src="../dist/js/libs/spin.min.js"></script>
+        <script src="../dist/js/jqueryEasyTools.js"></script>-->
         <script>
             
             
             $(document).on('ready', function() {
+                
+                easySmoothScroll();
                 
                 // easyYouTube
                 easyYouTube({
@@ -102,9 +163,66 @@
                 });
                 
                 $('.demo-spinner-button').on('click', function() {
-                    if($(this).hasClass('spinnerOn')) loader.start('#spinnerWindow');
+                    if($(this).hasClass('spinnerOn')) loader.start('#spinnerWindow',"");
                     if($(this).hasClass('spinnerOff')) loader.stop('#spinnerWindow');
                 });
+                
+                // easyCookies
+                var cookies = new easyCookies();
+
+                $('#writeCookie').click(function(e) {
+                    e.preventDefault();
+                    $('#writeCookieMessage').hide();
+                    var writeOpt = {
+                        name: $('#cookie_set_name').val(),
+                        value: $('#cookie_set_value').val(),
+                        expires: parseInt($('#cookie_set_expires').val()),
+                        callback: function(result) {
+                            if(result === true) {
+                                var message = "Success";
+                            }else{
+                                var message = "Error";
+                            }
+                            $('#writeCookieMessage > p').html(message)
+                            
+                            $('#writeCookieMessage').show();
+                        }
+                    }
+                    cookies.writeCookie(writeOpt);
+                });   
+                
+                $('#readCookie').click(function(e) {
+                    e.preventDefault();
+                    $('#readCookieMessage').hide();
+                    var readCookie = cookies.readCookie($('#cookie_read_name').val());
+                    if (readCookie !== undefined && readCookie !== "") {
+                        var message = "Cookie Value Is: " + readCookie;
+                    }else{
+                        var message = "Cookie Not Found!";
+                    }
+                    $('#readCookieMessage > p').html(message)
+                    $('#readCookieMessage').show();
+                });
+                
+                $('#matchCookieValue').click(function(e) {
+                    e.preventDefault();
+                    $('#matchCookieValueMessage').hide();
+                    var matchValueOpts = {
+                        name: $('#cookie_match_name').val(),
+                        value: $('#cookie_match_value').val(),
+                        callback: function(result) {
+                            if (result === true) {
+                                var message = "Values match!";
+                            }else{
+                                var message = "Values don't match!";
+                            }
+                            $('#matchCookieValueMessage > p').html(message)
+                            $('#matchCookieValueMessage').show();
+                        }
+                    }
+                    cookies.matchCookieValue(matchValueOpts);             
+                });
+
             });
             
             
