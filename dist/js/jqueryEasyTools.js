@@ -1,10 +1,15 @@
 /*!
  *  jqueryEasyTools - v1.0.0
  *  ========================================================== 
- *  Date: 17/10/2015 
+ *  Date: 18/10/2015 
  *  Home: https://github.com/Gix075/jqueryEasyTools#readme 
  *  (c) by Gix075 | All righrs reserved! 
 */
+/*! 
+ *  easyAjaxSpinner | a simple way to menage an ajax spinner 
+ *  Version 1.0.0 - Date: 17/10/2015 
+ *  HomePage: https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-ajax-spinner 
+*/ 
 
 function easyAjaxSpinner(options) {
     
@@ -110,6 +115,11 @@ function easyAjaxSpinner(options) {
         }, plugin.settings.delayOut);
     };
 }
+/*! 
+ *  easyCookies | A simple way to handle cookies 
+ *  Version 1.0.1 - Date: 11/10/2015 
+ *  HomePage: https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-cookies 
+*/ 
 function easyCookies() {
     
     this.writeCookie = function(opt) {
@@ -167,6 +177,11 @@ function easyCookies() {
         }
     }
 }
+/*! 
+ *  easyGmap | A simple way to include one or more Google Maps inside your site 
+ *  Version 1.0.2 - Date: 17/10/2015 
+ *  HomePage: https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-gmap 
+*/ 
 
 function easyGMap() {   
                         
@@ -217,6 +232,57 @@ function easyGMap() {
 
 
 
+/*! 
+ *  easyReadmore | Build your collapsing text with a simple system! 
+ *  Version 1.0.1 - Date: 11/10/2015 
+ *  HomePage: https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-readmore 
+*/ 
+
+function easyReadmore (options) {
+    
+    var defaults = {
+            btnClass: ".readmore",
+            hideOpenBtn: true,
+            ease: "swing", //jquery ease plugin needed
+            speed: 300
+        },
+        settings = $.extend({}, defaults, options);
+        wrapper = settings.btnClass + "-wrapper",
+        openBtn = settings.btnClass + ".open",
+        closeBtn = settings.btnClass + ".close",
+        hiddenBox = settings.btnClass + "-hidden";
+        
+        
+    // open readmore box
+    // =========================================================
+    $(openBtn).on('click', function (e) {
+        e.preventDefault();
+        if (settings.hideOpenBtn === true) $(this).hide();
+        $(this).closest(wrapper).find(hiddenBox).slideDown({
+            duration: settings.speed,
+            easing: settings.ease
+        });
+    });
+    
+    // close readmore box
+    // =========================================================
+    $(closeBtn).on('click', function (e) {
+        e.preventDefault();
+        $(this).closest(hiddenBox).slideUp({
+            duration: settings.speed,
+            easing: settings.ease,
+            done: function() {
+                if (settings.hideOpenBtn === true) $(this).closest(wrapper).find(openBtn).fadeIn();
+            }
+        });
+    });
+    
+}
+/*! 
+ *  easyYouTube | asynchronous YouTube iframe generator 
+ *  Version 1.0.2 - Date: 13/10/2015 
+ *  HomePage: https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-youtube 
+*/ 
 
 function easyYouTube(options) {
     var defaults = {
@@ -281,45 +347,3 @@ function easyYouTube(options) {
     
 }
 
-
-
-function easyReadmore (options) {
-    
-    var defaults = {
-            btnClass: ".readmore",
-            hideOpenBtn: true,
-            ease: "swing", //jquery ease plugin needed
-            speed: 300
-        },
-        settings = $.extend({}, defaults, options);
-        wrapper = settings.btnClass + "-wrapper",
-        openBtn = settings.btnClass + ".open",
-        closeBtn = settings.btnClass + ".close",
-        hiddenBox = settings.btnClass + "-hidden";
-        
-        
-    // open readmore box
-    // =========================================================
-    $(openBtn).on('click', function (e) {
-        e.preventDefault();
-        if (settings.hideOpenBtn === true) $(this).hide();
-        $(this).closest(wrapper).find(hiddenBox).slideDown({
-            duration: settings.speed,
-            easing: settings.ease
-        });
-    });
-    
-    // close readmore box
-    // =========================================================
-    $(closeBtn).on('click', function (e) {
-        e.preventDefault();
-        $(this).closest(hiddenBox).slideUp({
-            duration: settings.speed,
-            easing: settings.ease,
-            done: function() {
-                if (settings.hideOpenBtn === true) $(this).closest(wrapper).find(openBtn).fadeIn();
-            }
-        });
-    });
-    
-}

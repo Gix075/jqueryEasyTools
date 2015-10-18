@@ -27,11 +27,12 @@ module.exports = function(grunt) {
         },
         dist: {
             src: [
-                'tools/easy-ajax-spinner/src/js/easyAjaxSpinner.js',
-                'tools/easy-cookies/src/js/easyCookies.js',
-                'tools/easy-gmap/src/js/easyGmap.js',
-                'tools/easy-youtube/src/js/easyYoutube.js',
-                'tools/easy-readmore/src/js/easyReadmore.js'
+                'tools/easy-ajax-spinner/dist/js/easyAjaxSpinner.js',
+                'tools/easy-cookies/dist/js/easyCookies.js',
+                'tools/easy-gmap/dist/js/easyGmap.js',
+                'tools/easy-readmore/dist/js/easyReadmore.js',
+                //'tools/easy-smooth-scroll/dist/js/easySmoothScroll.js',
+                'tools/easy-youtube/dist/js/easyYoutube.js'
             ],
             dest: 'dist/js/jqueryEasyTools.js'
         }
@@ -63,8 +64,8 @@ module.exports = function(grunt) {
         dist: {
             files: {
                 'dist/css/jqueryEasyTools.min.css': [
-                    'tools/easy-ajax-spinner/src/css/easyAjaxSpinner.css',
-                    'tools/easy-gmap/src/css/easyGmap.css'
+                    'tools/easy-ajax-spinner/dist/css/easyAjaxSpinner.css',
+                    'tools/easy-gmap/src/dist/easyGmap.css'
                 ]
             }   
         }
