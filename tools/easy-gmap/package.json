@@ -6,7 +6,7 @@
   "github": "https://github.com/Gix075/jqueryEasyTools.git",
   "bugs": "https://github.com/Gix075/jqueryEasyTools/issues",
   "author": "Gix075",
-  "license": "GNU/GPL 2",
+  "license": "MIT",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-clean": "~0.6.0",
