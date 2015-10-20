@@ -1,0 +1,220 @@
+// {LESS} File for simple product documentation
+
+// VARIABLES
+// ==============================================
+
+
+//body
+@body-font-size: 1em;
+@body-font-family: @font-1;
+@body-font-color: @gray-middle;
+@body-background-color: @color-1;
+@body-padding: 0;
+@body-margin: 0;
+
+
+// wrapper
+@wrapper-margin: @margin auto 0 auto;
+@wrapper-width: 90%;
+@wrapper-maxwidth: 1200px;
+
+@margin: 40px;
+@padding: 40px;
+
+// fonts
+@font-1: "Open Sans", sans-serif;
+@font-2: "Amatic SC", sans-serif;
+
+// colors
+@color-1: #fff;
+@color-2: #4285f4;
+
+@gray-light: #ccc;
+@gray-middle: #555;
+@gray-dark: #333;
+
+@white: #fff;
+@black: #212121;
+
+
+// ==============================================
+
+/* SITE STYLE */
+/* ============================================== */
+
+body {
+    padding: @body-padding;
+    margin: @body-margin;
+    color: @body-font-color;
+    background-color: @body-background-color;
+    font-size: @body-font-size;
+    font-family: @body-font-family;
+}
+
+
+a {
+    text-decoration: none;
+    color: @color-2;
+    font-weight: bold;
+}
+
+nav  {
+    margin-top: 50px;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    background-color: @color-2;
+    color: @white;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    -webkit-transition: background 0.2s ease;
+            transition: background 0.2s ease;
+}
+
+nav a:hover {
+    background-color: @gray-light;
+}
+
+small {
+    font-size: 0.5em;
+}
+
+hr {
+    height: 1px;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: @color-2;
+    margin: 50px 0 0 0;
+}
+
+header {
+    background: @color-2;
+    padding: 40px 0;
+}
+
+h1 {
+    font-size: 5em;
+    color: @white;
+    margin:0;
+    font-weight: bold;
+    font-family: @font-2;
+}
+
+h2 {
+    font-size: 2em;
+    color: @color-2;
+    font-family: @font-2;
+}
+
+h3 {
+    font-size: 1.8em;
+    color: @color-2;
+    font-family: @font-2;
+}
+
+h4 {
+    font-size: 1.5em;
+    color: @color-2;
+    font-family: @font-2;
+}
+
+footer {
+    background: #fff;
+    color: #1B2426;
+    text-align: center;
+}
+
+.centered-txt {
+    text-align: center;
+}
+
+.wrapper {
+    margin: @wrapper-margin;
+    width: @wrapper-width;
+    max-width: @wrapper-maxwidth;
+}
+
+#mapWrapper {
+    height: 300px;    
+    color: #1B2426;
+}
+
+.plugin-options strong {
+    color: @color-2;
+}
+
+
+table.pluginOptionsTable {
+    
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    
+    tr {
+        border-bottom: 1px solid @gray-light;
+    }
+    
+    th {
+        background: @color-2;
+        color: @white;
+    }
+    
+    td,th {
+        padding: 10px;
+    }
+    
+    .optionName {
+        font-weight: bold;
+    }
+    
+    .optionDesc {
+        font-style: italic;
+    }
+}
+
+
+.footerFactoryLogo {
+    padding-top: 0;
+}
+
+.footerFactoryLogo img {
+    width: 50px;
+}
+
+.footerPrivacyNavigation {
+    margin: 0;
+    background: transparent;
+}
+
+
+.syntaxhighlighter {
+    overflow-x: auto;
+}
+
+
+@media all and (max-width: 650px) {
+    body {
+        font-size: 0.8em;
+    }
+    nav a {
+        display: block;
+        margin-right: 0;
+    }
+}
+
+@media all and (max-width: 500px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    h4 {
+        font-size: 1.3em;
+    }
+}
