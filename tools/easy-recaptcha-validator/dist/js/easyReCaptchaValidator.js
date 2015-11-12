@@ -1,6 +1,6 @@
 /*! 
  *  easyReCaptchaValidator | A simple way to include and validate Google ReCaptcha 
- *  Version 1.0.1 - Date: 20/10/2015 
+ *  Version 1.0.1 - Date: 13/11/2015 
  *  HomePage: https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-recaptcha-validator 
 */ 
 

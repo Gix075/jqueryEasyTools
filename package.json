@@ -1,7 +1,7 @@
 {
   "name": "jquery-easy-tools",
   "title": "jqueryEasyTools",    
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "jquery script collection",
   "main": "src/jqueryEasyTool.js",
   "scripts": {

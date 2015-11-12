@@ -32,7 +32,8 @@ module.exports = function(grunt) {
                 'tools/easy-gmap/dist/js/easyGmap.js',
                 'tools/easy-readmore/dist/js/easyReadmore.js',
                 'tools/easy-smooth-scroll/dist/js/easySmoothScroll.js',
-                'tools/easy-youtube/dist/js/easyYoutube.js'
+                'tools/easy-youtube/dist/js/easyYoutube.js',
+                'tools/easy-recaptcha-validator/dist/js/easyReCaptchaValidator.js'
             ],
             dest: 'dist/js/jqueryEasyTools.js'
         }
@@ -82,7 +83,56 @@ module.exports = function(grunt) {
             {
                 src: 'tools/easy-readmore/src/js/helpers/jquery.easing.1.3.js',
                 dest: 'dist/js/libs/jquery.easing.1.3.js'
+            },
+            // Single Tools
+            // ====================================
+            {
+              src: 'tools/easy-ajax-spinner/dist/js/easyAjaxSpinner.min.js',
+              dest: 'dist/js/tools/easy-ajax-spinner/easyAjaxSpinner.min.js'
+            },
+            {
+              src: 'tools/easy-ajax-spinner/dist/js/easyAjaxSpinner.pack.min.js',
+              dest: 'dist/js/tools/easy-ajax-spinner/easyAjaxSpinner.pack.min.js'
+            },
+            
+            {
+              src: 'tools/easy-cookies/dist/js/easyCookies.min.js',
+              dest: 'dist/js/tools/easy-cookies/easyCookies.min.js'
+            },
+            
+            {
+              src: 'tools/easy-gmap/dist/js/easyGmap.min.js',
+              dest: 'dist/js/tools/easy-gmap/easyGmap.min.js'
+            },
+            
+            {
+              src: 'tools/easy-readmore/dist/js/easyReadmore.min.js',
+              dest: 'dist/js/tools/easy-readmore/easyReadmore.min.js'
+            },  
+            {
+              src: 'tools/easy-readmore/dist/js/easyReadmore.pack.min.js',
+              dest: 'dist/js/tools/easy-readmore/easyReadmore.pack.min.js'
+            },
+            
+            {
+              src: 'tools/easy-recaptcha-validator/dist/js/easyReCaptchaValidator.min.js',
+              dest: 'dist/js/tools/easy-recaptcha-validator/easyReCaptchaValidator.min.js'
+            },     
+            {
+              src: 'tools/easy-recaptcha-validator/dist/php/easyReCaptchaValidator.php',
+              dest: 'dist/php/easy-recaptcha-validator/easyReCaptchaValidator.php'
+            },
+            
+            {
+              src: 'tools/easy-smooth-scroll/dist/js/easySmoothScroll.min.js',
+              dest: 'dist/js/tools/easy-smooth-scroll/easySmoothScroll.min.js'
+            },
+            
+            {
+              src: 'tools/easy-youtube/dist/js/easyYouTube.min.js',
+              dest: 'dist/js/tools/easy-youtube/easyYouTube.min.js'
             }
+            
         ]
       }
     },

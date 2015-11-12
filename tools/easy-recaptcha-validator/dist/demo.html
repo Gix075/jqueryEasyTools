@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>easyReCaptchaValidator</title>
+        
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+        
+        <link href="demo.css" rel='stylesheet'>
+
+    </head>
+    <body>
+        <h1>easyReCaptchaValidator</h1>
+        
+        <h3>Warning</h3>
+        <strong>This demo needs to run on a real php webserver and GoogleReCaptcha Keys are required!</strong>
+        <br>
+        <a href="#" title="documentation"><em>See more on GitHub documentation</em></a>
+        
+        <form id="recaptchtest">
+            <div id="recaptchaExample"></div>
+            <p>
+                <button id="startRecaptcha">Test Recaptcha</button>
+            </p>
+            <div id="recaptchaMsg"></div>
+        </form>
+    
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="js/easyReCaptchaValidator.js"></script>
+        
+        <script>
+            var reCaptchaParamas = {
+                publicKey: "xxxxxxxxxxxxxxxxxxxxxxxxx", // place here your public key!!!!
+                theme: "dark", //recaptcha theme
+                debug: true, //
+                phpValidator: 'php/easyReCaptchaValidator.php',
+                callbacks: {
+                    success: function() {
+                        var htmlMsg = '<h3>Success</h3>';
+                            htmlMsg += '<p>recaptcha validation passed!<br> ... you are not a robot.</p>';
+                        $('#recaptchaMsg').html(htmlMsg);
+                    },
+                    error: function() {
+                        var htmlMsg = '<h3>Error</h3>';
+                            htmlMsg += '<p>sorry, but seems that you are a robot!</p>';
+                        $('#recaptchaMsg').html(htmlMsg);
+                    }
+                }
+            }
+            
+            $(window).on('load', function() {
+                reCap = new reCaptchaValidator(reCaptchaParamas);
+                reCap.getCaptcha('recaptchaExample');
+                $('#startRecaptcha').on('click', function(e) {
+                    e.preventDefault();
+                    reCap.validateCaptcha('recaptchaExample');
+                });
+            });
+            
+            
+        </script>
+        
+    </body>
+</html>
