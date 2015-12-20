@@ -33,7 +33,8 @@ module.exports = function(grunt) {
                 'tools/easy-readmore/dist/js/easyReadmore.js',
                 'tools/easy-smooth-scroll/dist/js/easySmoothScroll.js',
                 'tools/easy-youtube/dist/js/easyYoutube.js',
-                'tools/easy-recaptcha-validator/dist/js/easyReCaptchaValidator.js'
+                'tools/easy-recaptcha-validator/dist/js/easyReCaptchaValidator.js',
+                'tools/easy-height-equalizer/dist/js/easyHeightEqualizer.js'
             ],
             dest: 'dist/js/jqueryEasyTools.js'
         }
@@ -131,6 +132,11 @@ module.exports = function(grunt) {
             {
               src: 'tools/easy-youtube/dist/js/easyYouTube.min.js',
               dest: 'dist/js/tools/easy-youtube/easyYouTube.min.js'
+            },
+            
+            {
+              src: 'tools/easy-height-equalizer/dist/js/easyHeightEqualizer.min.js',
+              dest: 'dist/js/tools/easy-height-equalizer/easyHeightEqualizer.min.js'
             }
             
         ]

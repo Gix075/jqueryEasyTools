@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        <title>easyHeightEqualizer</title>
+        
+
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="demo.css">
+        
+    </head>
+    
+    
+    <body>
+        <section class="wrapper">
+            <h1><i class="fa fa-cubes"></i> easyHeightEqualizer</h1>
+            
+            <div class="exampleWrapper">
+                <div class="exampleItem">
+                    <p>Lorem ipsum dolor si amet, lorem ipsum dolor si amet, lorem ipsum dolor si amet, lorem ipsum dolor si amet, lorem ipsum dolor si amet.</p>
+                </div>
+                <div class="exampleItem">
+                    <p>Lorem ipsum dolor si amet</p>
+                </div>
+                <div class="exampleItem">
+                    <p>Lorem ipsum dolor si amet, lorem ipsum dolor si amet, lorem ipsum dolor si amet.</p>
+                </div>
+            </div>
+            
+            <div>
+                <h3>Example Code</h3>
+                <p>You can use the following code to start unsing easyHeightEqualizer.</p>
+                <h4>HTML</h4>
+<pre>
+<code>
+&lt;p class="exampleItem">
+Lorem ipsum dolor si amet, lorem ipsum dolor si amet, lorem ipsum dolor si amet, 
+lorem ipsum dolor si amet, lorem ipsum dolor si amet.
+&lt;/p>   
+
+&lt;p class="exampleItem">
+Lorem ipsum dolor si amet.
+&lt;/p> 
+
+&lt;p class="exampleItem">
+Lorem ipsum dolor si amet, lorem ipsum dolor si amet, lorem ipsum dolor si amet.
+&lt;/p> 
+</code>
+</pre>
+                <h4>Javascript</h4>
+<pre>
+<code>
+$(document).on('ready', function() {
+    easyHeightEqualizer('.exampleItem');
+});    
+</code>
+</pre>
+            </div>
+            
+        </section>
+        
+        
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="js/easyHeightEqualizer.js"></script>
+        <script>
+            $(document).on('ready', function() {
+                easyHeightEqualizer('.exampleItem p');
+            });
+        </script>
+        
+    </body>
+
+</html>
+

@@ -105,3 +105,26 @@ a:hover {
 .message {
     display: none;
 }
+
+
+/* Easy HeightEqualizer */
+/* ============================================ */
+
+.heightEqualizer_demo {
+    margin: -5px;
+}
+.heightEqualizer_demo:before,
+.heightEqualizer_demo:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+.heightEqualizer_demoItem {
+    float: left;
+    width: 33.3333%;
+}
+.heightEqualizer_demoItem p {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+}

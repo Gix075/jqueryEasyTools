@@ -26,6 +26,7 @@
                 <a href="#easyreadmore" class="scroll">easyReadmore</a>
                 <a href="#easyajaxspinner" class="scroll">easyAjaxSpinner</a>
                 <a href="#easycookie" class="scroll">easyCookies</a>
+                <a href="#easyheightequalizer" class="scroll">easyHeightEqualizer</a>
             </div>
             
         </section>
@@ -125,6 +126,23 @@
         
         <hr>
         
+        <section id="easyheightequalizer" class="wrapper">
+            <h3>easyHeightEqualizer Demo</h3>
+            <div class="heightEqualizer_demo">
+                <div class="heightEqualizer_demoItem">
+                    <p>Lorem ipsum dolor si amet, lorem ipsum dolor si amet, lorem ipsum dolor si amet, lorem ipsum dolor si amet, lorem ipsum dolor si amet.</p>
+                </div>
+                <div class="heightEqualizer_demoItem">
+                    <p>Lorem ipsum dolor si amet</p>
+                </div>
+                <div class="heightEqualizer_demoItem">
+                    <p>Lorem ipsum dolor si amet, lorem ipsum dolor si amet, lorem ipsum dolor si amet.</p>
+                </div>
+            </div>
+        </section>
+        
+        <hr>
+        
         <div class="wrapper">
             <a href="#" class="back-top">Back Top</a>
         </div>
@@ -144,6 +162,9 @@
             $(document).on('ready', function() {
                 
                 easySmoothScroll();
+                
+                // easyHeightEqualizer
+                easyHeightEqualizer('.heightEqualizer_demoItem p');
                 
                 // easyYouTube
                 easyYouTube({

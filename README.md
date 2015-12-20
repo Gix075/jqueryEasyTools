@@ -33,9 +33,13 @@ Once *jqueryEasyTools* is loaded you can use all scripts as showed on repository
 | **easyReadmore** | [Documentation](https://github.com/Gix075/jqueryEasyTools/wiki/TOOL---easyReadmore ) | [Code](https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-readmore )
 | **easySmoothScroll** | [Documentation](https://github.com/Gix075/jqueryEasyTools/wiki/TOOL---easySmoothScroll ) | [Code](https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-smooth-scroll )
 | **easyYouTube** | [Documentation](https://github.com/Gix075/jqueryEasyTools/wiki/TOOL---easyYouTube ) | [Code](https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-youtube )
-| **easyRecaptchaValidator** | [Documentation](https://github.com/Gix075/jqueryEasyTools/wiki/TOOL---easyReCaptchaValidator)
+| **easyRecaptchaValidator** | [Documentation](https://github.com/Gix075/jqueryEasyTools/wiki/TOOL---easyReCaptchaValidator) | [Code](https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-recaptcha-validator )
+| **easyHeightEqualizer** | [Documentation](https://github.com/Gix075/jqueryEasyTools/wiki/TOOL---easyHeightEqualizer ) | [Code](https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-height-equalizer )
 
 ## Changes
+
+#### version 1.2.0
+* easyHeightEqualizer added to repo and dist
 
 #### version 1.1.0
 * some minor bugs solved
