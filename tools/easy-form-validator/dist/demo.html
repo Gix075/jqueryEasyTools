@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        <title>easyFormValidator</title>
+        
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/easyFormValidator.css">
+        
+        <link rel="stylesheet" href="demo.css">
+    </head>
+    
+    
+    <body>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>easyFormValidator</h1>
+                    <p>Simple jQuery tool for forms validation</p>
+                    <p class="alert alert-info">
+                        <strong>Bootstrap</strong><br>
+                        Bootstrap 3 is fully supported but not required!
+                    </p>
+                    <p class="alert alert-danger">
+                        <strong>Warning</strong><br>
+                        At this version, you must place error messages only between input and its label
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    
+                    <h3>Live Example</h3>
+                    <p>This is a simple demo of a form validation jquery class.</p>
+                    <hr>
+                    
+                    <form id="form">
+                        <!-- Text Inputs -->
+                        <!-- ==================================================================== -->
+                        <h4>TEXT INPUTS</h4>
+                        <div class="form-group">
+                            <label class="control-label" for="input_1">Text 1</label>
+                            <div class="form-input-error-msg alert alert-danger">
+                                <span class="glyphicon glyphicon-exclamation-sign"></span> This field is mandatary</div>
+                            <input type="text" id="input_1" class="form-control validate">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="input_2">Text 2</label>
+                            <div class="form-input-error-msg alert alert-danger">
+                                <span class="glyphicon glyphicon-exclamation-sign"></span> Error Message</div>
+                            <input type="text" id="input_2" class="form-control validate">
+                        </div>
+
+                        <!-- Email -->
+                        <!-- ==================================================================== -->
+                        <hr>
+                        <h4>EMAIL INPUTS</h4>
+                        <div class="form-group">
+                            <label class="control-label" for="email">Email</label>
+                            <div class="form-input-error-msg alert alert-danger">
+                                <span class="glyphicon glyphicon-exclamation-sign"></span> <span class="error-empty">Empty Field</span>
+                                <span class="error-wrong">Mail not correct</span>
+                            </div>
+                            <input type="email" id="email" class="form-control validate email-format">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="emailConfirm">Email Confirm</label>
+                            <div class="form-input-error-msg alert alert-danger">
+                                <span class="glyphicon glyphicon-exclamation-sign"></span> <span class="error-empty">Empty Field</span>
+                                <span class="error-wrong">Mail not confirmed</span>
+                            </div>
+                            <input type="email" id="emailConfirm" class="form-control validate email-confirm" data-confirm="#email">
+                        </div>
+
+                        <!-- Password -->
+                        <!-- ==================================================================== -->
+                        <hr>
+                        <h4>PASSWORD INPUTS</h4>
+                        <div class="form-group">
+                            <label class="control-label" for="password">Password</label>
+                            <div class="form-input-error-msg alert alert-danger">
+                                <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                <span class="error-empty">Type your password</span>
+                                <span class="error-wrong">Wrong password format</span>
+                            </div>
+                            <input type="password" id="password" class="form-control validate pswd">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="passwordConfirm">Confirm Password</label>
+                            <div class="form-input-error-msg alert alert-danger">
+                                <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                <span class="error-empty">Confirm your password</span>
+                                <span class="error-wrong">Passwords don't match</span>
+                            </div>
+                            <input type="password" id="passwordConfirm" class="form-control validate pswd-confirm" data-confirm="#password">
+                        </div>
+
+                        <!-- Phone Inputs -->
+                        <!-- ==================================================================== -->
+                        <hr>
+                        <h4>PHONE INPUTS</h4>
+                        <div class="form-group">
+                            <label class="control-label" for="phone">Telephone Number</label>
+                            <div class="form-input-error-msg alert alert-danger">
+                                <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                <span class="error-empty"> Insert your Phone Number</span>
+                                <span class="error-wrong">Not correct number</span>
+                            </div>
+                            <input type="tel" id="phone" class="form-control validate">
+                        </div>
+
+                        <!-- Selects -->
+                        <!-- ==================================================================== -->
+                        <hr>
+                        <h4>SELECT</h4>
+                        <div class="form-group">
+                            <label class="control-label" for="select_1">Select</label>
+                            <div class="form-input-error-msg alert alert-danger">
+                                <span class="glyphicon glyphicon-exclamation-sign"></span> Select an option
+                            </div>
+                            <select id="select_1" class="validate form-control">
+                                <option class="not-option">Select an Option</option>
+                                <option val="1">Option 1</option>
+                                <option val="2">Option 2</option>
+                                <option val="3">Option 3</option>
+                            </select>
+                        </div>
+
+                        <!-- Radios -->
+                        <!-- ==================================================================== -->
+                        <hr>
+                        <h4>RADIO</h4>
+                        <div class="form-group radio-group validate">
+
+                            <div class="form-input-error-msg alert alert-danger">
+                                <span class="glyphicon glyphicon-exclamation-sign"></span> Select an option
+                            </div>
+
+                            <div class="radio">
+                                <label class="control-label">
+                                    <input type="radio" value="1" name="radio_1"> Option 1
+                                </label>
+                            </div>
+
+                            <div class="radio">
+                                <label class="control-label">
+                                    <input type="radio" value="2" name="radio_1"> Option 2
+                                </label>
+                            </div>
+
+                        </div>
+                        <!-- /.radio-group -->
+
+                        <!-- Checkboxes -->
+                        <!-- ==================================================================== -->
+                        <hr>
+                        <h4>CHECKBOX</h4>
+                        <div class="form-group checkbox-group validate">
+
+                            <div class="form-input-error-msg alert alert-danger">
+                                <span class="glyphicon glyphicon-exclamation-sign"></span> Select an option
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="control-label">
+                                    <input type="checkbox" value="1" name="checkbox_1"> Option 1
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label class="control-label">
+                                    <input type="checkbox" value="2" name="checkbox_1"> Option 2
+                                </label>
+                            </div>
+
+                        </div>
+                        <!-- /.checkbox-group -->
+
+                        <!-- Textarea -->
+                        <!-- ==================================================================== -->
+                        <hr>
+                        <h4>TEXTAREA</h4>
+                        <div class="form-group">
+                            <label class="control-label" for="textarea_1">TextArea</label>
+                            <div class="form-input-error-msg alert alert-danger"><span class="glyphicon glyphicon-exclamation-sign"></span> Insert some text
+                            </div>
+                            <textarea id="textarea_1" class="form-control validate"></textarea>
+                        </div>
+
+                        <button id="submit" class="btn btn-primary">Sumbit</button>
+
+                    </form>                    
+                    
+                </div>
+                
+                <div class="col-md-6">
+                    <h3>Live Example on JsFiddle</h3>
+                    <p>Quick and easy live testing. Learn to use easyFormValidator on jsFiddle.</p>
+                    <hr>
+                    <iframe width="100%" height="300" src="//jsfiddle.net/Gix075/0k72d6ah/20/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                </div>
+                
+            </div>
+            
+            <footer class="row">
+                <div class="col-md-12">
+                    See more on GitHub Wiki
+                </div>
+            </footer>
+            
+        </div>
+        
+        
+
+       
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/easyFormValidator.js"></script>
+        <script>
+            $(document).ready(function() {
+                var globOpts = {
+                    bootstrap: true,
+                    mail: {
+                        format: true,
+                        confirm: true
+                    },
+                    password: {
+                        format: true,
+                        formatRegEx: /\b([A-Z0-9])([a-z0-9]+)?\b/gm,
+                        confirm: true
+                    },
+                    telephone: {
+                        numbersOnly: false
+                    },
+                    showErrors: true
+                }
+
+                var fv = new easyFormValidator(globOpts)
+                var validation = fv.validate('#form', '#submit', {
+                    success: function() {
+                        alert('validation success!')
+                    },
+                    fail: function() {
+                        alert('validation fail!')
+                    }
+                });
+
+            });
+        </script>
+        
+        
+    </body>
+
+</html>
+

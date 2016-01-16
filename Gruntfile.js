@@ -34,7 +34,8 @@ module.exports = function(grunt) {
                 'tools/easy-smooth-scroll/dist/js/easySmoothScroll.js',
                 'tools/easy-youtube/dist/js/easyYoutube.js',
                 'tools/easy-recaptcha-validator/dist/js/easyReCaptchaValidator.js',
-                'tools/easy-height-equalizer/dist/js/easyHeightEqualizer.js'
+                'tools/easy-height-equalizer/dist/js/easyHeightEqualizer.js',
+                'tools/easy-form-validator/dist/js/easyFormValidator.min.js'
             ],
             dest: 'dist/js/jqueryEasyTools.js'
         }
@@ -67,7 +68,8 @@ module.exports = function(grunt) {
             files: {
                 'dist/css/jqueryEasyTools.min.css': [
                     'tools/easy-ajax-spinner/dist/css/easyAjaxSpinner.css',
-                    'tools/easy-gmap/src/dist/easyGmap.css'
+                    'tools/easy-gmap/src/dist/css/easyGmap.css',
+                    'tools/easy-form-validator/dist/css/easyFormValidator.css'
                 ]
             }   
         }
@@ -137,6 +139,10 @@ module.exports = function(grunt) {
             {
               src: 'tools/easy-height-equalizer/dist/js/easyHeightEqualizer.min.js',
               dest: 'dist/js/tools/easy-height-equalizer/easyHeightEqualizer.min.js'
+            },
+            {
+              src: 'tools/easy-form-validator/dist/js/easyFormValidator.min.js',
+              dest: 'dist/js/tools/easy-form-validator/easyFormValidator.min.js'
             }
             
         ]
@@ -150,37 +156,7 @@ module.exports = function(grunt) {
                 'tools/easy-youtube/src/js/easyYoutube.js',
                 'tools/easy-readmore/src/js/easyReadmore.js'
             ]
-    }/*,
-
-    less : {
-      development : {
-        options : {
-          sourceMap : true,
-          sourceMapFileInline : true
-        },
-        files : [{
-          "dev/tool/css/fdCookieLaw.css" : "dev/tool/less/fdCookieLaw.less"
-        }]
-      },
-      production : {
-        options : {
-          banner: "<%= meta.banner %>"
-        },
-        files : [{
-          "dist/tool/css/fdCookieLaw.css" : "dev/tool/less/fdCookieLaw.less"
-        }]
-      }
-    },*/
-
-//    watch : {
-//      styles : {
-//        files : ['**/*.less'], // which files to watch
-//        tasks : ['less'],
-//        options : {
-//          nospawn : true
-//        }
-//      }
-//    }
+    }
 
   });
 
