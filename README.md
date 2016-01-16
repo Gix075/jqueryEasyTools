@@ -1,4 +1,4 @@
-# jqueryEasyTools 1.1.0
+# jqueryEasyTools 1.3.0
 jQuery Scripts Collection
 
 **jqueryEasyTools** is a collection of javascript tools that can help you to save time doing something such as load GoogleMaps, load YouTube video with a custom player, manage cookies, make a smooth scroll or make a cool spinner for ajax calls and so on.
@@ -35,8 +35,12 @@ Once *jqueryEasyTools* is loaded you can use all scripts as showed on repository
 | **easyYouTube** | [Documentation](https://github.com/Gix075/jqueryEasyTools/wiki/TOOL---easyYouTube ) | [Code](https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-youtube )
 | **easyRecaptchaValidator** | [Documentation](https://github.com/Gix075/jqueryEasyTools/wiki/TOOL---easyReCaptchaValidator) | [Code](https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-recaptcha-validator )
 | **easyHeightEqualizer** | [Documentation](https://github.com/Gix075/jqueryEasyTools/wiki/TOOL---easyHeightEqualizer ) | [Code](https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-height-equalizer )
+| **easyFormValidator** | [Documentation](https://github.com/Gix075/jqueryEasyTools/wiki/TOOL---easyFormValidator ) | [Code](https://github.com/Gix075/jqueryEasyTools/tree/master/tools/easy-formm-validator )
 
 ## Changes
+
+#### version 1.3.0
+* easyFormValidator added to repo and dist
 
 #### version 1.2.0
 * easyHeightEqualizer added to repo and dist
